@@ -162,3 +162,17 @@ Dans Sublime:
 - Chercher "Install Package" et lancer 'Package Control: Install Package' (en le sélectionnant à la souris ou en cliquand sur Entrée)
 - Chercher Sublime Linter -> Lancer l'installation en tapant sur Entrée
 
+
+
+
+
+
+
+
+## ------------------------------------------------------------------ ##
+## Anaconda: plugin for SublimeText
+##   - Python code completion
+## ------------------------------------------------------------------ ##
+
+- Right click on a variable name > Anaconda > Go to definition: check Python code
+- Right click anywhere in your file > Anaconda > Autoformat PEP8 errors: beautify
