@@ -176,3 +176,31 @@ Dans Sublime:
 
 - Right click on a variable name > Anaconda > Go to definition: check Python code
 - Right click anywhere in your file > Anaconda > Autoformat PEP8 errors: beautify
+
+
+
+
+
+
+
+
+## ------------------------------------------------------------------ ##
+## Git
+## ------------------------------------------------------------------ ##
+
+- Install Git:
+brew install git
+
+- Configure Git:
+git config --global user.email "myemail"
+git config --global user.name "myname"
+git config --global --list
+
+- In Sublime Text:
+- Cmd + Shift + P (pour ouvrir Command Palette)
+- Chercher "Install Package" et lancer 'Package Control: Install Package' (en le sélectionnant à la souris ou en cliquand sur Entrée)
+- Chercher GitGutter -> Lancer l'installation en tapant sur Entrée
+
+
+
+

@@ -1,4 +1,24 @@
 
+brew install git
+git config --global user.email "myemail"
+git config --global user.name "myname"
+git config --global --list
+
+user.email=rakho.myriam@gmail.com
+user.name=root35
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.postbuffer=524288000
+
+## ----------------------------------------------------------------- ##
+
+
+
+
+
+
 #### Mon repo
 https://github.com/root35/python/tree/main/data-science-process
 
