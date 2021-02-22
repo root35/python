@@ -1,9 +1,9 @@
 
-brew install git
-git config --global user.email "myemail"
-git config --global user.name "myname"
-git config --global --list
+$ brew install git
 
+$ git config --global user.email "myemail"
+$ git config --global user.name "myname"
+$ git config --global --list
 user.email=rakho.myriam@gmail.com
 user.name=root35
 filter.lfs.clean=git-lfs clean -- %f
@@ -12,12 +12,24 @@ filter.lfs.process=git-lfs filter-process
 filter.lfs.required=true
 http.postbuffer=524288000
 
+# Set Sublime Text as default instead of Vim for commit messages:
+
+$ git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' --wait --new-window"
+
+
 ## ----------------------------------------------------------------- ##
 
 
 
 
 
+## ----------------------------------------------------------------- ##
+
+## Create new repo
+git init repo_name
+cd repo
+
+## ----------------------------------------------------------------- ##
 
 #### Mon repo
 https://github.com/root35/python/tree/main/data-science-process
