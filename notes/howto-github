@@ -6,3 +6,54 @@
 $ git rm notes/howto-homebrew.sh
 $ git commit -m "..."
 $ git push origin main
+
+## ----------------------------------------------------------------- ##
+
+$ git push origin localbranch:newremotebranch
+$ git push origin -u existingremotebranch
+
+## ----------------------------------------------------------------- ##
+
+### Delete branch locally and remotely:
+
+# delete the local branch
+$ git branch -d localBranchName
+
+# delete the remote branch
+$ git push origin --delete remoteBranchName
+# or
+$ git push origin :remoteBranchName
+
+If you get the error below, it may mean that someone else has already deleted the branch.
+error: unable to push to unqualified destination: remoteBranchName The destination refspec neither matches an existing ref on the remote nor begins with refs/, and we are unable to guess a prefix based on the source ref. error: failed to push some refs to 'git@repository_name'
+Try to synchronize your branch list using:
+
+$ git fetch -p
+
+The -p flag means "prune". After fetching, branches which no longer exist on the remote will be deleted.
+
+## ----------------------------------------------------------------- ##
+
+### PUSH ERROR: file > 100 MB
+
+# error message
+$ remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com
+
+# SOLUTION:
+# https://git-lfs.github.com/
+# - Download package dans /Applications
+# - cd /Applications/git-lfs-darwin-amd64-v2.13.2/
+$ ./install.sh
+
+# - in each git repo where you will have big files (> 100 MB):
+$ git lfs track “*.psd”
+$ git add .gitattributes
+
+## ----------------------------------------------------------------- ##
+
+# ANNULER TOUS LES COMMITS NON PUSHES :
+# https://makina-corpus.com/blog/metier/archives/git-annuler-proprement-un-commit-apres-un-push
+# https://www.git-tower.com/learn/git/faq/undo-last-commit/
+$ git reset --hard origin/HEAD
+
+## ----------------------------------------------------------------- ##
