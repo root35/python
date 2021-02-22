@@ -1,0 +1,8 @@
+
+
+
+## Remove file from local+remote
+
+$ git rm notes/howto-homebrew.sh
+$ git commit -m "..."
+$ git push origin main
