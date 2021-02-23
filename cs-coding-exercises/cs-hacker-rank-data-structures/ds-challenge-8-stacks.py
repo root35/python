@@ -6,7 +6,7 @@ import sys
 def equalStacks(stack1, stack2, stack3):
     if (not stack1) and (not stack2) and (not stack3):
         return 0
-    
+
     sum1, sum2, sum3 = map(sum, (stack1, stack2, stack3))
 
     while stack1 and stack2 and stack3:
@@ -21,7 +21,7 @@ def equalStacks(stack1, stack2, stack3):
 
         if sum1 == sum2 == sum3:
             return sum1
-    
+
     return 0
 
 if __name__ == '__main__':

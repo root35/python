@@ -12,7 +12,7 @@ def reverseArray(a):
         return None
     if (len(a) == 1):
         return a
-    
+
     reversed = []
     for i in range(len(a), 0):
         reversed.append(a[i])

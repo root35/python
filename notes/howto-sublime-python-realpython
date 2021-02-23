@@ -1,5 +1,5 @@
 
-
+SOURCE: (realpython.com > My purchases)
 https://realpython.com/lessons/sublime-python-mac-setting-up-python/
 
 
@@ -53,7 +53,7 @@ No analytics data has been sent yet (or will be during this `install` run).
 
 ==> Next steps:
 - Run `brew help` to get started
-- Further documentation: 
+- Further documentation:
     https://docs.brew.sh
 
 
@@ -205,7 +205,7 @@ git config --global --list
 - Chercher GitGutter -> Lancer l'installation en tapant sur Entrée
 
 
-# --- 
+# ---
 # Set Sublime Text as default instead of Vim for commit messages:
 
 $ git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' --wait --new-window"
@@ -216,6 +216,52 @@ $ git config --global core.editor "'/Applications/Sublime Text.app/Contents/Shar
 - Chercher Git Commit Message Syntax -> Lancer l'installation en tapant sur Entrée
 
 
+# ---
+# Using the command line for Sublime Text: 'subl'
 
+# Link the binary command file from the Applications folder to the /bin folder:
+$ ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+
+OU:
+
+# In ~/.bashprofile, add following line:
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Then close file and execute:
+source ~/.bashrc
+
+
+## Examples
+
+subl file.txt      -> opens the file
+subl newfile.txt   -> creates and opens new file
+subl folder        -> opens the folder
+subl .             -> opens current folder
+
+
+
+$ subl --help
+Sublime Text build 3211
+
+Usage: subl [arguments] [files]         Edit the given files
+   or: subl [arguments] [directories]   Open the given directories
+   or: subl [arguments] -               Edit stdin
+
+Arguments:
+  --project <project>: Load the given project
+  --command <command>: Run the given command
+  -n or --new-window:  Open a new window
+  -a or --add:         Add folders to the current window
+  -w or --wait:        Wait for the files to be closed before returning
+  -b or --background:  Don't activate the application
+  -s or --stay:        Keep the application activated after closing the file
+  -h or --help:        Show help (this message) and exit
+  -v or --version:     Show version and exit
+
+--wait is implied if reading from stdin. Use --stay to not switch back
+to the terminal when a file is closed (only relevant if waiting for a file).
+
+Filenames may be given a :line or :line:column suffix to open at a specific
+location.
 
 

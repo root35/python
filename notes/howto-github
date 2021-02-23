@@ -1,4 +1,15 @@
 
+## ----------------------------------------------------------------- ##
+
+https://git-scm.com/book/en/v2
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+How to write a Git commit message:
+https://chris.beams.io/posts/git-commit/
+
+## ----------------------------------------------------------------- ##
+
+
 $ brew install git
 
 $ git config --global user.email "myemail"
@@ -19,9 +30,8 @@ $ git config --global core.editor "'/Applications/Sublime Text.app/Contents/Shar
 
 ## ----------------------------------------------------------------- ##
 
-
-
-
+git log
+git shortlog
 
 ## ----------------------------------------------------------------- ##
 

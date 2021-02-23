@@ -6,40 +6,42 @@ func_dict = {
     3: lambda stack: stack.find_max(),
 }
 
+
 class Stack:
     def __init__(self):
         self.stack = []
         self.max_values = []
-    
+
     def isEmpty(self):
         return len(self.stack) == 0
-    
+
     def push(self, obj):
         self.stack.append(obj)
         if len(self.max_values) == 0:
             self.max_values.append(obj)
         elif obj > self.max_values[-1]:
             self.max_values.append(obj)
-    
+
     def pop(self):
         if self.isEmpty():
             return None
-        
+
         popped = self.stack.pop()
         if popped == self.max_values[-1] \
           and not popped in self.stack:
             self.max_values.pop()
         return popped
-    
+
     def peek(self):
         if self.isEmpty():
             return None
         return self.stack[-1]
-    
+
     def find_max(self):
         if self.isEmpty():
             print('')
         print(self.max_values[-1])
+
 
 if __name__ == '__main__':
     n_queries = int(input())
