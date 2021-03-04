@@ -17,6 +17,29 @@
 # Write your code here:
 
 
+class Dog():
+    def __init__(self, name):
+        self.name = name
+
+    def describe(self):
+        return "{} the dog says: Woof!".format(self.name)
+
+
+class Cat():
+    def __init__(self, name):
+        self.name = name
+
+    def describe(self):
+        return "{} the kitty cat says: Meow!".format(self.name)
+
+
+class Fish():
+    def __init__(self, name):
+        self.name = name
+
+    def describe(self):
+        return "{} the fish says: ".format(self.name)
+
 
 # Do not edit any code below this line!
 

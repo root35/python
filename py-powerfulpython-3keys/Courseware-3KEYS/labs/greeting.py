@@ -1,2 +1,2 @@
 def greet(name):
-    return ""
+    return 'Hi, {}'.format(name)

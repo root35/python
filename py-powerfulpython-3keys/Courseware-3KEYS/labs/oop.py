@@ -79,6 +79,34 @@ Hit points can't go below zero, though:
 # Write your code here:
 
 
+class Critter():
+    def __init__(self, name):
+        self.name = name
+
+    def is_alive(self):
+        return self.hitpoints > 0
+
+    def attack(self, critter):
+        if critter.hitpoints >= self.damage:
+            damage = self.damage
+            critter.hitpoints -= self.damage
+
+        else:
+            damage = critter.hitpoints
+            critter.hitpoints = 0
+
+        return damage
+
+
+class Goblin(Critter):
+    damage = 3
+    hitpoints = 10
+
+
+class Orc (Critter):
+    damage = 5
+    hitpoints = 15
+
 
 # Do not edit any code below this line!
 

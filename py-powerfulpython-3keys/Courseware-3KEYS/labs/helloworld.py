@@ -33,6 +33,13 @@ Pro tips:
 # Write your code here:
 
 
+def hello(name):
+    return "Hello, {}!".format(name)
+
+
+def print_hello(name):
+    print("Hello, {}!".format(name))
+
 
 if __name__ == '__main__':
     import doctest
