@@ -54,6 +54,26 @@ BLASTOFF!
 # Write your code here:
 
 
+def evens_up_to(max_even):
+    for even in range(1, max_even):
+        if even % 2 == 0:
+            yield even
+    if max_even % 2 == 0:
+        yield max_even
+
+
+def squares_up_to(max_square):
+    for root in range(1, max_square):
+        square = root**2
+        if square <= max_square:
+            yield square
+
+
+def countdown(min_value):
+    for value in range(min_value, 0, -1):
+        yield value
+    yield 'BLASTOFF!'
+
 
 # Do not edit any code below this line!
 
@@ -64,4 +84,3 @@ if __name__ == '__main__':
         print('*** ALL TESTS PASS ***\nGive someone a HIGH FIVE!')
 
 # From Powerful Python. Copyright MigrateUp LLC. All rights reserved.
-
