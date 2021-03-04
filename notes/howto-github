@@ -55,6 +55,21 @@ https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-d
 https://dzone.com/articles/top-20-git-commands-with-examples
 
 ## ----------------------------------------------------------------- ##
+
+## Rename folder/file
+
+https://www.patrick-wied.at/blog/rename-files-and-folders-with-git
+
+git mv oldfolder newfolder
+git add -u newfolder       # -u update already tracked files/folders
+git commit -m "changed the foldername whaddup"
+
+# if newfolder exists and you want to overwrite it
+git mv -f oldfolder newfolder
+
+# Renaming foldername to folderName on case insensitive file systems:
+# previous method won't work. See link above.
+
 ## ----------------------------------------------------------------- ##
 
 ## Remove file from local+remote
