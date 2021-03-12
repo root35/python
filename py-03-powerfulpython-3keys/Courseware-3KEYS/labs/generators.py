@@ -83,4 +83,6 @@ if __name__ == '__main__':
     if count == 0:
         print('*** ALL TESTS PASS ***\nGive someone a HIGH FIVE!')
 
+# -- USAGE: python -m doctest generators.py
+
 # From Powerful Python. Copyright MigrateUp LLC. All rights reserved.
