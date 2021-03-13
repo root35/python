@@ -29,5 +29,6 @@ if __name__ == '__main__':
         print('*** ALL TESTS PASS ***\nGive someone a HIGH FIVE!')
 
 
-# -- USAGE: python test-with-doctest.py
+# -- USAGE: python3 -m doctest test-with-doctest.py
+#   -v: verbose option
 # SEE: More info about 'python -m doctest'
