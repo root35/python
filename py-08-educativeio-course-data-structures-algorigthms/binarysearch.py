@@ -7,7 +7,7 @@ def binary_search_rec(data, key):
     elif key < data[mid_index]:
         return binary_search_rec(data[0:mid_index], key)
     else:
-        return binary_search_rec(data[mid_index:len(data)], key)
+        return binary_search_rec(data[mid_index+1:len(data)], key)
 
 def main():
     data = [2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
