@@ -22,4 +22,5 @@ class TestPerson(unittest.TestCase):
         self.assertEqual("Mr. John Doe", guy.formal_name("Mr."))
 
 
-# -- USAGE: python3 -m unittest test-with-unittest.py
+# -- USAGE:
+#    python3 -m unittest test-with-unittest.py
