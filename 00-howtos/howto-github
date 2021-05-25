@@ -74,7 +74,19 @@ git mv -f oldfolder newfolder
 
 ## Remove file from local+remote
 
-$ git rm notes/howto-homebrew.sh
+$ git rm notes/howto-homebrew.sh  
+$ git commit -m "..."
+$ git push origin main
+
+git rm -r pour dossiers
+git rm --cached pour supprimer uniquement remote
+   (me suis trompée, ai supprimé local en premier)
+
+## ----------------------------------------------------------------- ##
+
+## Rename local+remote file or folder
+
+$ git mv py-00-templates py-templates
 $ git commit -m "..."
 $ git push origin main
 

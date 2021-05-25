@@ -1,0 +1,122 @@
+import unittest
+import copy
+
+
+def split_words(message):
+    if not message:
+        return message
+    
+    space_indexes = [index for index, value in enumerate(message)
+                     if value == ' ']
+
+    if not space_indexes:
+        return [message]
+
+    words = []
+    i = 0
+
+    while i < len(space_indexes):
+        if i == 0:
+            begin = 0
+            end = space_indexes[0]
+        else:
+            begin = space_indexes[i-1] + 1
+            end = space_indexes[i]
+
+        words.append(message[begin:end])
+        words.append([' '])
+        i += 1
+    
+    words.extend([message[space_indexes[-1]+1:len(message)]])
+
+    return words
+        
+
+
+def reverse_words(message):
+    if not message:
+        return
+    
+    # Split the list into a list of lists, each sub-list a word
+    words = split_words(message)
+    for i, word in enumerate(words):
+        message[i] = words[i][:]
+    del(message[i+1:])
+
+    # Reverse the list of words
+    if (not message):
+        return 
+
+    middle_index = len(message) // 2
+    
+    if len(message) % 2 == 0:
+        current_left_index = middle_index - 1
+        current_right_index = middle_index
+    else:
+        current_left_index = middle_index - 1
+        current_right_index = middle_index + 1
+    
+    while current_left_index >= 0:
+        message[current_left_index], message[current_right_index] = \
+            message[current_right_index], message[current_left_index]
+            
+        current_left_index -= 1
+        current_right_index += 1
+        
+    # learned!
+    # Flatten the list of lists in place
+    tmp = [character for word in message for character in word]
+    for i, elem in enumerate(tmp):
+        if (i >= len(message)):
+            message.append(elem)
+        else:
+            message[i] = elem
+    del(message[i+1:])
+    
+
+
+
+
+
+# Tests
+
+class Test(unittest.TestCase):
+
+    def test_one_word(self):
+        message = list('vault')
+        reverse_words(message)
+        expected = list('vault')
+        self.assertEqual(message, expected)
+
+    def test_two_words(self):
+        message = list('thief cake')
+        reverse_words(message)
+        expected = list('cake thief')
+        self.assertEqual(message, expected)
+
+    def test_three_words(self):
+        message = list('one another get')
+        reverse_words(message)
+        expected = list('get another one')
+        self.assertEqual(message, expected)
+
+    def test_multiple_words_same_length(self):
+        message = list('rat the ate cat the')
+        reverse_words(message)
+        expected = list('the cat ate the rat')
+        self.assertEqual(message, expected)
+
+    def test_multiple_words_different_lengths(self):
+        message = list('yummy is cake bundt chocolate')
+        reverse_words(message)
+        expected = list('chocolate bundt cake is yummy')
+        self.assertEqual(message, expected)
+
+    def test_empty_string(self):
+        message = list('')
+        reverse_words(message)
+        expected = list('')
+        self.assertEqual(message, expected)
+
+
+unittest.main(verbosity=2)
