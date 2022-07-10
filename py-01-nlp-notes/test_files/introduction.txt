@@ -1,0 +1,4 @@
+Ce tutoriel Spacy explique comment faire
+du Traitement Automatique du Langage Naturel.
+Est-ce que tu peux ... Laisse tomber.
+J'ai oublié ce que je voulais dire !
