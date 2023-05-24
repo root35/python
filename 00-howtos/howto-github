@@ -72,6 +72,8 @@ git mv -f oldfolder newfolder
 
 ## ----------------------------------------------------------------- ##
 
+https://thedevpost.com/blog/remove-files-or-folders-from-remote-git/
+
 ## Remove file from local+remote
 
 $ git rm notes/howto-homebrew.sh  
@@ -89,6 +91,12 @@ git rm --cached pour supprimer uniquement remote
 $ git mv py-00-templates py-templates
 $ git commit -m "..."
 $ git push origin main
+
+## ----------------------------------------------------------------- ##
+
+##Showing your remote:
+# https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+$ git remote -v
 
 ## ----------------------------------------------------------------- ##
 
