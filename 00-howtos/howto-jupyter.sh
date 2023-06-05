@@ -27,4 +27,8 @@ $ (base) macbook nltk_data >> jupyter notebook   # -> py39
 $ (base) macbook ~ >> jupyter notebook           # -> default
 
 
+$ source activate py39
+(OR: $ conda activate py39)
+$ pip install pip_search
+$ pip_search langchain
 
