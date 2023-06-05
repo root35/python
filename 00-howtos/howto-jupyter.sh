@@ -26,10 +26,15 @@ $ echo $OPENAI_API_KEY
 $ (base) macbook nltk_data >> jupyter notebook   # -> py39
 $ (base) macbook ~ >> jupyter notebook           # -> default
 
+#### LangChain installation
 
 $ source activate py39
 (OR: $ conda activate py39)
 $ pip install pip_search
 $ pip_search langchain
 $ pip install langchain[all]
+
+# Rust dependency
+# https://www.rust-lang.org/tools/install
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
