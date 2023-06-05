@@ -31,4 +31,5 @@ $ source activate py39
 (OR: $ conda activate py39)
 $ pip install pip_search
 $ pip_search langchain
+$ pip install langchain[all]
 
