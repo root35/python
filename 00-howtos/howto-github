@@ -1,6 +1,7 @@
 
 ## ----------------------------------------------------------------- ##
 
+git status
 git add .
 git commit -m "Message"
 git pull --rebase origin main
